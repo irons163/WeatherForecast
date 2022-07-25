@@ -16,6 +16,11 @@
 		D1653AA7287C2E0D00FE6884 /* WeatherForecastTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1653AA6287C2E0D00FE6884 /* WeatherForecastTests.swift */; };
 		D1653AB1287C2E0D00FE6884 /* WeatherForecastUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1653AB0287C2E0D00FE6884 /* WeatherForecastUITests.swift */; };
 		D1653AB3287C2E0D00FE6884 /* WeatherForecastUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1653AB2287C2E0D00FE6884 /* WeatherForecastUITestsLaunchTests.swift */; };
+		D1653AC2287C707700FE6884 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1653AC1287C707600FE6884 /* DetailViewController.swift */; };
+		D1653AC8287C8B9B00FE6884 /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1653AC7287C8B9B00FE6884 /* Forecast.swift */; };
+		D1653ACB287C90E400FE6884 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D1653ACA287C90E400FE6884 /* Alamofire */; };
+		D1653ACE287C90FE00FE6884 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1653ACD287C90FE00FE6884 /* NetworkService.swift */; };
+		D1653AD6287DE18100FE6884 /* UserDefaults+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1653AD5287DE18100FE6884 /* UserDefaults+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,10 @@
 		D1653AAC287C2E0D00FE6884 /* WeatherForecastUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherForecastUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1653AB0287C2E0D00FE6884 /* WeatherForecastUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherForecastUITests.swift; sourceTree = "<group>"; };
 		D1653AB2287C2E0D00FE6884 /* WeatherForecastUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherForecastUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D1653AC1287C707600FE6884 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		D1653AC7287C8B9B00FE6884 /* Forecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
+		D1653ACD287C90FE00FE6884 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		D1653AD5287DE18100FE6884 /* UserDefaults+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1653ACB287C90E400FE6884 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,9 +109,13 @@
 		D1653A8E287C2E0B00FE6884 /* WeatherForecast */ = {
 			isa = PBXGroup;
 			children = (
+				D1653AD4287DE16E00FE6884 /* Extensions */,
+				D1653ACC287C90F400FE6884 /* NetworkService */,
+				D1653AC6287C8B8F00FE6884 /* Models */,
 				D1653A8F287C2E0B00FE6884 /* AppDelegate.swift */,
 				D1653A91287C2E0B00FE6884 /* SceneDelegate.swift */,
 				D1653A93287C2E0B00FE6884 /* ViewController.swift */,
+				D1653AC1287C707600FE6884 /* DetailViewController.swift */,
 				D1653A95287C2E0B00FE6884 /* Main.storyboard */,
 				D1653A98287C2E0D00FE6884 /* Assets.xcassets */,
 				D1653A9A287C2E0D00FE6884 /* LaunchScreen.storyboard */,
@@ -127,6 +141,30 @@
 			path = WeatherForecastUITests;
 			sourceTree = "<group>";
 		};
+		D1653AC6287C8B8F00FE6884 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D1653AC7287C8B9B00FE6884 /* Forecast.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D1653ACC287C90F400FE6884 /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				D1653ACD287C90FE00FE6884 /* NetworkService.swift */,
+			);
+			path = NetworkService;
+			sourceTree = "<group>";
+		};
+		D1653AD4287DE16E00FE6884 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D1653AD5287DE18100FE6884 /* UserDefaults+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +181,9 @@
 			dependencies = (
 			);
 			name = WeatherForecast;
+			packageProductDependencies = (
+				D1653ACA287C90E400FE6884 /* Alamofire */,
+			);
 			productName = WeatherForecast;
 			productReference = D1653A8C287C2E0B00FE6884 /* WeatherForecast.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +256,9 @@
 				Base,
 			);
 			mainGroup = D1653A83287C2E0B00FE6884;
+			packageReferences = (
+				D1653AC9287C90E400FE6884 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = D1653A8D287C2E0B00FE6884 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -261,6 +305,10 @@
 				D1653A94287C2E0B00FE6884 /* ViewController.swift in Sources */,
 				D1653A90287C2E0B00FE6884 /* AppDelegate.swift in Sources */,
 				D1653A92287C2E0B00FE6884 /* SceneDelegate.swift in Sources */,
+				D1653AC2287C707700FE6884 /* DetailViewController.swift in Sources */,
+				D1653AD6287DE18100FE6884 /* UserDefaults+Extensions.swift in Sources */,
+				D1653ACE287C90FE00FE6884 /* NetworkService.swift in Sources */,
+				D1653AC8287C8B9B00FE6884 /* Forecast.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -602,6 +650,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D1653AC9287C90E400FE6884 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D1653ACA287C90E400FE6884 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D1653AC9287C90E400FE6884 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D1653A84287C2E0B00FE6884 /* Project object */;
 }

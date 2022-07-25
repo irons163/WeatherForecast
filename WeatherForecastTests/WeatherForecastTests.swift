@@ -3,7 +3,7 @@
 //  WeatherForecastTests
 //
 //  Created by Phil Chang on 2022/7/11.
-//  Copyright © 2022 Yahoo. All rights reserved.
+//  Copyright © 2022 Phil. All rights reserved.
 //
 
 import XCTest
